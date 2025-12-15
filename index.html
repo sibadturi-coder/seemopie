@@ -283,7 +283,7 @@
                 const pathArray = window.location.pathname.split('/');
                 const movieId = pathArray[pathArray.length - 1];
 
-                const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}`);
+                const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${TMDB_API_KEY}&language=fr-FR`);
                 const movie = await movieResponse.json();
 
                 if (movie.success === false) {
